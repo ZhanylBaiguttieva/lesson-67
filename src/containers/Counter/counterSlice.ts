@@ -13,8 +13,6 @@ export const counterSlice = createSlice({
     reducers: {
         count: (state) => {
             state.value = eval(state.value);
-            console.log(state.value);
-
         },
         show: (state,action: PayloadAction<string>) => {
             state.value += action.payload;

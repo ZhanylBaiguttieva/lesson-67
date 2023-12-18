@@ -7,7 +7,7 @@ const Counter = () => {
     const dispatch = useDispatch();
     return (
         <div className="Counter">
-            <div className="bg-warning">{counterValue}</div>
+            <div className="bg-light">{counterValue}</div>
             <div className="m-2">
                 <button onClick={() => dispatch(show('+'))}>+</button>&nbsp;
                 <button onClick={() => dispatch(show('-'))}>-</button>&nbsp;
@@ -26,8 +26,10 @@ const Counter = () => {
                 <button onClick={()=> dispatch(show('7'))}>7</button>&nbsp;
                 <button onClick={()=> dispatch(show('8'))}>8</button>&nbsp;
             </div>
-            <button onClick={()=> dispatch(show('9'))}>9</button>&nbsp;
-            <button onClick={() => dispatch(count())}>=</button>
+            <div className='m-2'>
+                <button onClick={()=> dispatch(show('9'))}>9</button>&nbsp;
+                <button onClick={() => dispatch(count())}>=</button>
+            </div>
         </div>
     );
 };
